@@ -1,0 +1,10 @@
+<section class="listWrapper">
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <ul *ngIf="!isLoading" class="blogList">
+        <li *ngFor="let entry of entries" class="blogEntry">
+            <app-blog-entry
+                [entry]="entry">
+            </app-blog-entry>
+        </li>
+    </ul>
+</section>

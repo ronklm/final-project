@@ -1,0 +1,7 @@
+<app-header></app-header>
+<main [ngSwitch]="header !== undefined ? header.pageChoice : ''">
+  <app-about *ngSwitchCase="'about'"></app-about>
+  <app-blog *ngSwitchCase="'blog'"></app-blog>
+  <app-home *ngSwitchDefault></app-home>
+</main>
+<app-footer></app-footer>
